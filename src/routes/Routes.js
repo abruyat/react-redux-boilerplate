@@ -19,15 +19,15 @@ const Routes = ({ lang }) => {
 
   useEffect(() => {
     store.dispatch(
-      setCurrentLang(location.pathname.split("/")[1] === "en" ? "en" : "ar")
+      setCurrentLang(location.pathname.split("/")[1] === "en" ? "en" : "fr")
     );
   }, []);
 
   useEffect(() => {
     const pathname = location.pathname.split("/");
-    pathname[1] = pathname[1] === "en" ? "en" : "ar";
+    pathname[1] = pathname[1] === "en" ? "en" : "fr";
     const newPathname = pathname.join("/");
-    History.push(newPathname.replace(/en|ar/, lang));
+    History.push(newPathname.replace(/en|fr/, lang));
   }, [lang]);
 
   return (

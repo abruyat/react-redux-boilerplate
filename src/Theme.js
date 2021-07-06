@@ -10,10 +10,10 @@ import App from "./containers/App";
 function ThemeApp() {
   const jss = create({ plugins: [...jssPreset().plugins, rtl()] });
   const lang = useSelector(state => state.lang);
-  const [direction, setDirection] = useState(lang === "en" ? "ltr" : "rtl");
+  const [direction, setDirection] = useState('ltr');
 
   useEffect(() => {
-    setDirection(lang === "en" ? "ltr" : "rtl");
+    setDirection('ltr');
   }, [lang]);
 
   const theme = createMuiTheme({

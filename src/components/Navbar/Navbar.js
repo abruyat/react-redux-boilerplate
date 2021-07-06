@@ -10,7 +10,7 @@ export default function Navbar() {
   const dispatch = useDispatch();
   const message = messages[lang];
   const switchLanguage = lang => {
-    dispatch(setCurrentLang(lang === "ar" ? "en" : "ar"));
+    dispatch(setCurrentLang(lang === "fr" ? "en" : "fr"));
   };
 
   return (
